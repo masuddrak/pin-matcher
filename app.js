@@ -28,3 +28,18 @@ document.getElementById('keyPad').addEventListener('click',function(event){
     }
     
 })
+// submit function
+ const notifyRight= document.getElementById('notifyRight');
+ const notifyWrong= document.getElementById('notifyWrong');
+function submitBtn(){
+    const displayPin=document.getElementById('displayPin').value;
+    const displayKey=document.getElementById('displayKey').value;
+    if(displayPin==displayKey){
+        notifyRight.style.display='block'
+        notifyWrong.style.display='none'
+    }
+    else{
+        notifyRight.style.display='none'
+        notifyWrong.style.display='block'
+    }
+}
